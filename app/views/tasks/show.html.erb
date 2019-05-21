@@ -1,0 +1,19 @@
+   <!--  <h2 class="my-3">Task Info</h2> -->
+    <!-- <input type='checkbox' value='<%= @task.completed %>' name='selfdestruct'> -->
+    <div>
+      <h4 class="my-5">
+        <% if @task.completed == true %>
+          <i class="far fa-check-square"></i>
+        <% else%>
+          <i class="far fa-square"></i>
+        <% end %>
+        <%= @task.title %>
+      </h4>
+      <p><%= @task.details %></p>
+    </div>
+    <div>
+       <%= link_to "Edit", edit_task_path,  class: "btn btn-primary py-2 px-3 rounded"%>
+      <%= link_to "Tasks", tasks_path,  class: "btn btn-secondary my-5 py-2 px-3 rounded"%>
+    </div>
+
+
